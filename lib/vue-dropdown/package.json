@@ -1,5 +1,5 @@
 {
-  "name": "vue-dropdown",
+  "name": "lk_vue_dropdown",
   "version": "1.0.0",
   "description": "A Vue.js component dropdown",
   "main": "dist/vue-dropdown.js",
@@ -8,6 +8,10 @@
   },
   "author": "Liju Kuriakose",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lijukrks/lk_vue_dropdown"
+  },
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
