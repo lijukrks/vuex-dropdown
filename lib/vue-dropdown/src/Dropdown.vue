@@ -16,7 +16,6 @@
 
 <script>
 export default {
-  name: "dropdown",
   props: ["options", "selected"],
   data: function() {
     return {
@@ -26,7 +25,7 @@ export default {
   methods: {
     hadleClick(option) {
       this.isOpened = !this.isOpened;
-      this.$emit("onSelectOption", option);
+      this.$emit("onSelect", option);
     },
     toggleDropdown() {
       this.isOpened = !this.isOpened;
@@ -152,3 +151,4 @@ export default {
   cursor: pointer;
 }
 </style>
+
