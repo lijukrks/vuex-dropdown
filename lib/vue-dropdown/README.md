@@ -1,6 +1,6 @@
 # vue-dropdown
 
-A Vue component for Dropdown.
+A Vue component for Dropdown. [GitHub](https://github.com/lijukrks/lk_vue_dropdown)
 
 ## Installation
 
