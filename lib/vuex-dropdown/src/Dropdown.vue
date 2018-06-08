@@ -1,5 +1,5 @@
 <template>
-   <div class="dropdown" v-click-outside="outsideClick">
+   <div v-bind:class="getClassNames" v-click-outside="outsideClick">
         <div class="dropdown__header" v-bind:class= "{'is-active' : isOpened}" @click="toggleDropdown()">
             <span>{{selected.label}}</span>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  props: ["options", "selected"],
+  props: ["options", "selected", "classNames"],
   data: function() {
     return {
       isOpened: false
@@ -32,6 +32,19 @@ export default {
     },
     outsideClick() {
       this.isOpened = false;
+    }
+  },
+  computed: {
+    getClassNames: function() {
+      let classObj = {
+        dropdown: true
+      };
+      if (this.classNames) {
+        this.classNames.map(name => {
+          classObj[name] = true;
+        });
+      }
+      return classObj;
     }
   },
   directives: {

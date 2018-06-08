@@ -1,8 +1,9 @@
 <template>
     <VuexDropdown 
-      v-on:onSelectOption="handleChangedropdown($event)" 
+      v-on:onSelect="handleChangedropdown($event)" 
       v-bind:options="options"
-      v-bind:selected="selected"/>
+      v-bind:selected="selected"
+      v-bind:classNames="['test']"/>
 </template>
 
 <script>
@@ -33,6 +34,7 @@ export default {
   },
   methods: {
     handleChangedropdown: function(e) {
+      debugger;
       this.selected = e;
     }
   }
