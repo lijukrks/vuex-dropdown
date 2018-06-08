@@ -163,5 +163,8 @@ export default {
   margin-top: 15px;
   cursor: pointer;
 }
+.dropdown .dropdown__content ul li:hover {
+  background: whitesmoke;
+}
 </style>
 
