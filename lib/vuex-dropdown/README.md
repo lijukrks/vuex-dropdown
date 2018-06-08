@@ -2,6 +2,8 @@
 
 > A vue.js dropdown component
 
+![Image of Yaktocat](https://raw.githubusercontent.com/lijukrks/vuex-dropdown/master/static/images/mock.gif)
+
 ## Installation of vuex-dropdown
 
 ```js
