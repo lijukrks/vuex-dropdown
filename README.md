@@ -42,21 +42,21 @@ Once installed, it can be used in a template as simply as:
 ## Options
 ```js
 [
-{
-label: "Heck",
-value: "heck"
-},
-{
-label: "Jane",
-value: "jane"
-}
+  {
+    label: "Heck",
+    value: "heck"
+  },
+  {
+    label: "Jane",
+    value: "jane"
+  }
 ]
 ```
 ## Selected
 ```js
 {
-label: "Heck",
-value: "heck"
+  label: "Heck",
+  value: "heck"
 }
 ```
 
