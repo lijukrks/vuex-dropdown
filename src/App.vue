@@ -3,7 +3,7 @@
       v-on:onSelect="handleChangedropdown($event)" 
       v-bind:options="options"
       v-bind:selected="selected"
-      v-bind:classNames="['test']"/>
+      v-bind:classNames="['wrapper']"/>
 </template>
 
 <script>

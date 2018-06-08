@@ -38,10 +38,11 @@ import VuexDropdown from 'vuex-dropdown';
 Once installed, it can be used in a template as simply as:
 
 ```html
-<VuexDropdown 
-      v-on:onSelectOption="handleChange($event)" 
-      v-bind:options="options"
-      v-bind:selected="selected"/>
+<VuexDropdown
+  v-on:onSelect="handleChangedropdown($event)" 
+  v-bind:options="options"
+  v-bind:selected="selected"
+  v-bind:classNames="['wrapper']"/>
 ```
 
 ## Options
@@ -67,3 +68,15 @@ Once installed, it can be used in a template as simply as:
   value: "heck"
 }
 ```
+
+## classNames
+
+The classnames to wrapp the component
+
+```js
+["wrapper"]
+```
+
+## License
+
+MIT © Liju Kuriakose
