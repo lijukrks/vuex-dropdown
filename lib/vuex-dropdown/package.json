@@ -16,7 +16,8 @@
     "vue",
     "vuejs",
     "dropdown",
-    "vuex-dropdown"
+    "vuex-dropdown",
+    "vuejs-components"
   ],
   "devDependencies": {
     "babel-core": "^6.10.4",
