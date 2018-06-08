@@ -16,20 +16,24 @@ Include the script file
 <script type="text/javascript" src="node_modules/vuejs/dist/vue.min.js"></script>
 <script type="text/javascript" src="node_modules/vue-dropdown/dist/vuex-dropdown.min.js"></script>
 ```
-## Usage
+
+## Browser Usage
+
 then install the component with `Vue.use(VuexDropdown);`
+
 ```html
 <script type="text/javascript">
   Vue.use(VuexDropdown);
 </script>
 ```
+
 ### Module
 
 ```js
 import VuexDropdown from 'vuex-dropdown';
 ```
 
-## Usage
+## Module Usage
 
 Once installed, it can be used in a template as simply as:
 
@@ -39,7 +43,9 @@ Once installed, it can be used in a template as simply as:
       v-bind:options="options"
       v-bind:selected="selected"/>
 ```
+
 ## Options
+
 ```js
 [
   {
@@ -52,15 +58,15 @@ Once installed, it can be used in a template as simply as:
   }
 ]
 ```
+
 ## Selected
+
 ```js
 {
   label: "Heck",
   value: "heck"
 }
 ```
-
-
 
 ## Example - Build Setup
 

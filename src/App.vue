@@ -13,26 +13,26 @@ export default {
   data: function() {
     return {
       options: [
-          {
-            label: "H1",
-            value: "h1"
-          },
-          {
-            label: "H2",
-            value: "h2"
-          }
-        ],
-        selected: {
-          label: "H1",
-          value: "h1"
+        {
+          label: "Heck",
+          value: "heck"
+        },
+        {
+          label: "Jane",
+          value: "jane"
         }
+      ],
+      selected: {
+        label: "Heck",
+        value: "heck"
+      }
     };
   },
   components: {
     VuexDropdown
   },
-  methods:{
-    handleChangedropdown:function(e){
+  methods: {
+    handleChangedropdown: function(e) {
       this.selected = e;
     }
   }
