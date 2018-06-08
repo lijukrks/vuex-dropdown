@@ -12,6 +12,12 @@
     "type": "git",
     "url": "https://github.com/lijukrks/vuex-dropdown"
   },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "dropdown",
+    "vuex-dropdown"
+  ],
   "devDependencies": {
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
