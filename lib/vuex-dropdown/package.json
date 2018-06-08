@@ -1,8 +1,8 @@
 {
-  "name": "lk_vue_dropdown",
+  "name": "vuex-dropdown",
   "version": "1.0.0",
   "description": "A Vue.js component dropdown",
-  "main": "dist/vue-dropdown.js",
+  "main": "dist/vuex-dropdown.js",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lijukrks/lk_vue_dropdown"
+    "url": "https://github.com/lijukrks/vuex-dropdown"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

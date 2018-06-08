@@ -1,12 +1,12 @@
 <template>
-    <vueDropdown 
+    <VuexDropdown 
       v-on:onSelectOption="handleChangedropdown($event)" 
       v-bind:options="options"
       v-bind:selected="selected"/>
 </template>
 
 <script>
-import vueDropdown from "vue-dropdown";
+import VuexDropdown from "vuex-dropdown";
 
 export default {
   name: "App",
@@ -29,7 +29,7 @@ export default {
     };
   },
   components: {
-    vueDropdown
+    VuexDropdown
   },
   methods:{
     handleChangedropdown:function(e){
