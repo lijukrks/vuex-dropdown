@@ -7,6 +7,7 @@
 </template>
 
 <script>
+//importing the vuex-dropdown component
 import VuexDropdown from "vuex-dropdown";
 
 export default {
@@ -34,7 +35,6 @@ export default {
   },
   methods: {
     handleChangedropdown: function(e) {
-      debugger;
       this.selected = e;
     }
   }

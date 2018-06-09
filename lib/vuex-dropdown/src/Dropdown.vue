@@ -36,6 +36,7 @@ export default {
   },
   computed: {
     getClassNames: function() {
+      //Adding the class name to the outer division
       let classObj = {
         dropdown: true
       };
