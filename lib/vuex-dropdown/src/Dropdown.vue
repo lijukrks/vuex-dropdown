@@ -1,12 +1,12 @@
 <template>
    <div v-bind:class="getClassNames" v-click-outside="outsideClick">
-        <div class="dropdown__header" v-bind:class= "{'is-active' : isOpened}" @click="toggleDropdown()">
+        <div class="vuexdropdown__header" @click="toggleDropdown()">
             <span>{{selected.label}}</span>
             <i class="fa fa-angle-down" aria-hidden="true"></i>
             <i class="fa fa-angle-up" aria-hidden="true"></i>
         </div>
         
-        <div class="dropdown__content">
+        <div class="vuexdropdown__content">
             <ul>
                 <li v-for="(option,index) in options" v-bind:key="index" v-on:click="hadleClick(option)">{{option.label}}</li>
             </ul>
@@ -38,7 +38,8 @@ export default {
     getClassNames: function() {
       //Adding the class name to the outer division
       let classObj = {
-        dropdown: true
+        vuexdropdown: true,
+        "is-active": this.isOpened
       };
       if (this.classNames) {
         this.classNames.map(name => {
@@ -76,26 +77,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.dropdown {
-  width: 25%;
+.vuexdropdown {
+  display: block;
+  position: relative;
 }
-.dropdown__header {
+.vuexdropdown__header {
   background-color: #fff;
   border: solid 1px #cdcdcd;
-  height: 30px;
   line-height: 30px;
-  padding: 0px 8px;
+  padding: 0px 40px 0 8px;
   position: relative;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-}
-
-.dropdown__header {
-  padding-right: 40px;
   cursor: pointer;
 }
 
-.dropdown__header i.fa {
+.vuexdropdown__header i.fa {
   position: absolute;
   right: 10px;
   top: 50%;
@@ -104,40 +101,25 @@ export default {
   font-size: 22px;
 }
 
-.dropdown__header i.fa.fa-angle-up {
+.vuexdropdown__header i.fa.fa-angle-up {
   opacity: 0;
 }
 
-.dropdown__header.is-active i.fa.fa-angle-up {
+.vuexdropdown.is-active .vuexdropdown__header i.fa.fa-angle-up {
   opacity: 1;
 }
 
-.dropdown__header.is-active i.fa.fa-angle-down {
+.vuexdropdown.is-active .vuexdropdown__header i.fa.fa-angle-down {
   opacity: 0;
 }
-
-.dropdown {
-  display: block;
-  margin: 0;
-  position: relative;
-  min-width: 160px;
-}
-
-.dropdown__header.is-active + .dropdown__content {
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown .dropdown__content {
+.vuexdropdown .vuexdropdown__content {
   position: absolute;
   width: 100%;
   display: block;
-  height: 0;
+  max-height: 0;
   opacity: 0;
   overflow: hidden;
   padding: 0;
-  transition: all 0.3s ease-in-out;
   visibility: hidden;
   z-index: 999;
   background-color: #fff;
@@ -147,25 +129,33 @@ export default {
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.vuexdropdown.is-active .vuexdropdown__content{
+  max-height: 1500px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
 }
 
-.dropdown .dropdown__content ul {
+.vuexdropdown .vuexdropdown__content ul {
   display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.dropdown .dropdown__content ul li {
-  display: block;
-  padding: 8px 10px;
+.vuexdropdown .vuexdropdown__content ul li {
   display: block;
   padding: 8px 10px;
   margin: 0;
-  background-color: transparent;
   text-align: left;
-  margin-top: 15px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-.dropdown .dropdown__content ul li:hover {
+.vuexdropdown .vuexdropdown__content ul li:hover {
   background: whitesmoke;
+  transition: all 0.3s ease-in-out;
 }
 </style>
 
